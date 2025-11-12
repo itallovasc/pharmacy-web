@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Cliente – FarmaVida</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo-link">
+      <img src="/logof.png" alt="Logo FarmaVida" class="logo">
+    </a>
+    <h1>Cadastro de Cliente</h1>
+  </header>
+
+  <nav>
+    <p><a href="index.html">← Voltar à Página Principal</a></p>
+  </nav>
+
+  <main>
+    <form action="cadastrar_cliente.php" method="post">
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" minlength="4" pattern="[A-Za-zÀ-ÿ\s]+" required>
+
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
+
+        <label for="data-nasc">Data de Nascimento:</label>
+        <input type="date" id="data-nasc" name="data-nasc" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" pattern="\(\d{2}\) \d{4,5}-\d{4}" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Endereço</legend>
+        <label for="endereco">Endereço Completo:</label>
+        <input type="text" id="endereco" name="endereco" placeholder="Rua, número, complemento" required>
+
+        <label for="bairro">Bairro:</label>
+        <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro" pattern="[A-Za-zÀ-ÿ\s]+" required>
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade" pattern="[A-Za-zÀ-ÿ\s]+" required>
+
+        <label for="uf">UF:</label>
+        <select id="uf" name="uf" required>
+          <option value="">Selecione</option>
+          <option value="AC">AC</option>
+          <option value="AL">AL</option>
+          <option value="AM">AM</option>
+          <option value="BA">BA</option>
+          <option value="CE">CE</option>
+          <option value="DF">DF</option>
+          <option value="ES">ES</option>
+          <option value="GO">GO</option>
+          <option value="MA">MA</option>
+          <option value="MG">MG</option>
+          <option value="MS">MS</option>
+          <option value="MT">MT</option>
+          <option value="PA">PA</option>
+          <option value="PB">PB</option>
+          <option value="PE">PE</option>
+          <option value="PI">PI</option>
+          <option value="PR">PR</option>
+          <option value="RJ">RJ</option>
+          <option value="RN">RN</option>
+          <option value="RO">RO</option>
+          <option value="RR">RR</option>
+          <option value="RS">RS</option>
+          <option value="SC">SC</option>
+          <option value="SE">SE</option>
+          <option value="SP">SP</option>
+          <option value="TO">TO</option>
+        </select>
+      </fieldset>
+      <fieldset>
+       <legend>Foto do Cliente</legend>
+       <label for="foto-cliente">Selecione uma imagem:</label>
+       <input type="file" id="foto-cliente" name="foto-cliente" accept="image/*" required>
+      </fieldset>
+      <div class="botoes-form">
+        <button type="submit" class="btn-salvar">Salvar</button>
+        <button type="reset" class="btn-cancelar">Cancelar</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p><a href="index.html">Voltar à página principal</a></p>
+  </footer>
+</body>
+</html>
